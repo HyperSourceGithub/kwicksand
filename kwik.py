@@ -1,4 +1,5 @@
 import time
+import os
 
 txt = [] # define a list for the text
 
@@ -8,11 +9,12 @@ def kwik(text):
         txt.append(l)
     for i in range(len(txt)):
         print(*txt[0:i], sep="", end='\r')
-        time.sleep(0.08)
+        time.sleep(0.8)
     print(*txt[0:len(txt)], sep="")
 
-# tests
-print("KWIKSAND TEST")
-kwik("Hello World!")
-kwik("I am Bob!")
-kwik("This is a text engine.")
+# main loop
+os.system('clear')
+print("Welcome to the kwiksand environment!")
+while True:
+    chosen_print = input("Please enter some text to print: ")
+    kwik(chosen_print)
