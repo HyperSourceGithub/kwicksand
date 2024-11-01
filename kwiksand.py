@@ -3,8 +3,8 @@ import shutil
 
 txt = [] # define a list for the text
 
-def kwik(text):
-    if len(text) >= shutil.get_terminal_size().columns:
+def kwik(text, delay):
+    if len(text) > shutil.get_terminal_size().columns:
         print("ERR: Text too long!")
     else:
         txt.clear()
@@ -12,7 +12,7 @@ def kwik(text):
             txt.append(l)
         for i in range(len(txt)):
             print(*txt[0:i], sep="", end='\r')
-            time.sleep(0.08)
+            time.sleep(delay)
         print(*txt[0:len(txt)], sep="")
 
 def kwiklist():
