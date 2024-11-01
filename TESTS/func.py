@@ -17,6 +17,8 @@ def testkwik(text):
     print(text)
 
 def kwik(text, delay):
+    global txt
+    txt = []
     if len(text) > shutil.get_terminal_size().columns:
         print("ERR: Text too long!")
     else:

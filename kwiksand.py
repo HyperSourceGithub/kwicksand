@@ -1,9 +1,9 @@
 import time
 import shutil
 
-txt = [] # define a list for the text
-
 def kwik(text, delay):
+    global txt
+    txt = []
     if len(text) > shutil.get_terminal_size().columns:
         print("ERR: Text too long!")
     else:
