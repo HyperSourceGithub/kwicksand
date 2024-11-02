@@ -1,7 +1,7 @@
 import time
 import shutil
 
-def kwik(text, delay):
+def kwik(text, delay=0.05):
     global txt
     txt = []
     if len(text) > shutil.get_terminal_size().columns:
