@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='kwiksand',
-    packages=find_packages(),
+    packages=find_packages(include=['kwiksand']),
     version='0.1.3',
     description='a thing to write text character by character',
     author='HyperSource01',
