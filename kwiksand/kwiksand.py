@@ -1,7 +1,7 @@
 import time
 import shutil
 
-def kwik(text, delay=0.05):
+def kwik(text, delay=0.02):
     global txt
     txt = []
     if len(text) > shutil.get_terminal_size().columns:
@@ -14,9 +14,3 @@ def kwik(text, delay=0.05):
             print(*txt[0:i], sep="", end='\r')
             time.sleep(delay)
         print(*txt[0:len(txt)], sep="")
-
-def kwiklist():
-    print(txt)
-
-def kwiklist_str():
-    print(*txt, sep="")
