@@ -2,23 +2,22 @@
 ### an efficient, simple text engine
 types text character by character
 
-### **NOW WITH EMOJI SUPPORT!** 😃🚄✈️📱💾💀
-
 # Kwikstart
 ```py
 import kwiksand as k
-k.kwik("Hello World!", 0.06)
+k.kwik("Hello World!", 0.06, True)
 ```
-Will type "Hello World!" with a 0.06 delay between characters. 
+Will type "Hello World!" with a 0.06 delay between characters, and regularly print the text if it's too long.
 # Usage
 ```py
-kwik(text, delay=0.05)
+kwik(text, delay=0.04, overprint=False)
 ```
 #### Parameters
 `text`: the text you want to write.
 
-`delay`: the delay between characters (sec). Default value is `0.05` seconds.
+`delay`: the delay between characters (sec). Default value is `0.04` seconds.
 
+`overprint`: regularly prints text (`print()`) if it's too long when True. Default value is `False`.
 
 # Examples
 #### Basic
