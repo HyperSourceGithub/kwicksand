@@ -5,7 +5,7 @@ def kwik(text, delay=0.04):
     global txt
     txt = []
     if len(text) > shutil.get_terminal_size().columns:
-        print("ERR: Text too long!")
+        print(f"ERR: Text too long! Your text is {len(text)} characters while your output can only print {shutil.get_terminal_sie().columns} characters.")
     else:
         txt.clear()
         for l in text:
